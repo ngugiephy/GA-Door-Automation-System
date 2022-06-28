@@ -1,0 +1,2 @@
+void setupRFID();
+void scanCard();

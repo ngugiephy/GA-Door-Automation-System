@@ -1,9 +1,27 @@
 #include <Arduino.h>
+#include <LiquidCrystal_I2C.h>
 
+#include "globalV.h"
+#include "rfid.h"
+#include "keypad.h"
+/*
+  TODO
+RFID and Keypad
+*/
 void setup() {
-  // put your setup code here, to run once:
+  Serial.begin(9600);
+  pinMode(blinkPin,OUTPUT);
+  setupRFID();
 }
 
 void loop() {
-  // put your main code here, to run repeatedly:
+  //blinkTest();
+  scanCard();
+}
+
+void blinkTest(){
+  digitalWrite(blinkPin,HIGH);
+  delay(1000);
+  digitalWrite(blinkPin,LOW);
+  delay(1000);
 }
