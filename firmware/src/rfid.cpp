@@ -7,6 +7,7 @@
 
 MFRC522 mfrc522(SS_PIN, RST_PIN);  // Create MFRC522 instance
 LiquidCrystal_I2C lcd(0x27,20,4);  // set the LCD address to 0x27 for a 16 chars and 2 line display
+
 void setupRFID()
 {
   pinMode(red, OUTPUT);

@@ -10,7 +10,7 @@
 #define lock 6
 #define buzzer 2
 
-#define blinkPin 5
+#define blinkPin 2
 #define R1 12
 #define R2 11
 #define R3 10

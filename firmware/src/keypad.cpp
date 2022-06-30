@@ -59,9 +59,8 @@ int scanRow(int col){
         if(!digitalRead(activeCol)) return 3;
         digitalWrite(R4,LOW);
         if(!digitalRead(activeCol)) return 4;
-    }else{
-        return 0;
     }
+    return 0;
 }
 
 String keypad(){

@@ -4,24 +4,25 @@
 #include "globalV.h"
 #include "rfid.h"
 #include "keypad.h"
-/*
-  TODO
-RFID and Keypad
-*/
-void setup() {
-  Serial.begin(9600);
-  pinMode(blinkPin,OUTPUT);
-  setupRFID();
-}
-
-void loop() {
-  //blinkTest();
-  scanCard();
-}
+#include "postman.h"
 
 void blinkTest(){
   digitalWrite(blinkPin,HIGH);
   delay(1000);
   digitalWrite(blinkPin,LOW);
   delay(1000);
+}
+
+void setup() {
+  Serial.begin(9600);
+  pinMode(blinkPin,OUTPUT);
+  setupRFID();
+  keypadSetup();
+}
+
+void loop() {
+  blinkTest();
+  // postMan();
+  // scanCard();
+  // keyScanner();
 }
