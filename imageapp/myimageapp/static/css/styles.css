@@ -1,0 +1,32 @@
+ *{
+    margin: 0;
+    padding: 0;
+ }
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+ }
+ .small-container {
+    max-width: 1080px;
+    margin: auto;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+.col-4 {
+    flex-basis: 20%;
+    padding: 10px;
+    min-width: 200px;
+}
+
+.col-4 img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.small-container {
+    margin-top: 50px;
+    margin-bottom: 30px;
+}

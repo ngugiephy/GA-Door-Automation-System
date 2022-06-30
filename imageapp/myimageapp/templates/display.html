@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{tablename}}</title>
+</head>
+
+<body>
+    <table class="content-table">
+        <thead>
+            <tr>
+                {% for column in columns %}
+                <th>{{column}}</th>
+                {% endfor %}
+            </tr>
+        </thead>
+        <tbody>
+
+            {% for record in records %}
+            <tr>
+                {% for column in columns %}
+                <td>{{record[column]}}</td>
+                {% endfor %}
+            </tr>
+            {% endfor %}
+
+        </tbody>
+    </table>
+    <div>
+        <a href="{{url_for('home_page')}}">Back</a>
+    </div>
+</body>
+
+</html>

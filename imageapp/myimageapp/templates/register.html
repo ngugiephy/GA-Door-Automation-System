@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+</head>
+
+<body>
+    </div>
+
+    <table>
+        <thead>
+            <tr>
+                {% for column in column_list %}
+                <th>{{column}}</th>
+                {% endfor %}
+            </tr>
+        </thead>
+
+
+        <tbody>
+            <tr>
+                <form method="POST">
+
+                    {% for column in column_list %}
+                                        
+                    {% if column != "password" %}
+                    <td>
+                        <input type="text" name="{{column}}" id="{{column}}">
+                    </td>
+                    {% endif %}
+                    {% if column == "password" %}
+                    <td>
+                        <input type="password" name="{{column}}" id="{{column}}">
+                    </td>
+                    {% endif %}                    
+
+                    {% endfor %}
+
+                    <td>
+                        <input type="submit" value="Register">
+                    </td>
+                </form>
+            </tr>
+        </tbody>
+
+
+    </table>
+
+    {% if err_msg %}
+    <p>{{err_msg}}</p>
+    {% endif %}
+
+    <div>
+        <a href="{{url_for('home_page')}}">Back</a>
+    </div>
+
+    </div>
+</body>
+
+</html>

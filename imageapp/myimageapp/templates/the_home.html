@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h4>Hello</h4>
+    {% if current_user.is_authenticated %}
+    <p>Welcome {{current_user.user_name}}</p>
+
+    <p>
+        Navigate using the links as below
+    </p>
+    
+    <ul>
+        <li>
+            <a href="{{url_for('upload_page')}}">Upload Image(s)</a>
+        </li>
+        <li>
+            <a href="{{url_for('view_images')}}">View Images</a>
+        </li>
+    </ul>
+
+    <a href="{{url_for('logout_page')}}">Logout</a>
+    {% endif %}
+
+    {% if current_user.is_anonymous %}
+    <p>
+        Please login <a href="{{url_for('login_page')}}">here</a>
+        or register <a href="{{url_for('register_page')}}">here</a>
+    </p>
+    {% endif %}
+</body>
+
+</html>

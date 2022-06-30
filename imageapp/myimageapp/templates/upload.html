@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Upload</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+</head>
+
+<body>
+    <p>Upload your files here</p><br>
+    <form id="upload-form" action="{{url_for('upload')}}" method="post" enctype="multipart/form-data">
+        <input id="file-picker" type="file" name="file" accept="image/*" multiple>
+        <div id="msg"></div>
+        <input type="submit" value="upload">
+        <br>
+        <a href="{{url_for('home_page')}}">Back</a>
+    </form>
+
+</body>
+
+<script>
+    // For each change we want to implement a function
+    // In this function the following will happen
+    // The contents of the file uploader will be read
+    // The file names in the file uploader will be retrieved
+    // Verify that each of the files has either of the extensions that we have approved of
+
+    $("#file-picker").change(function () {
+
+        var input = document.getElementById('file-picker');
+        // Here basically input will contain the object of the file picker
+
+        for (var i = 0; i < input.files.length; i++) {
+            //koala.jpg, koala.JPG substring(index) lastIndexOof('a') koala.1.jpg
+            //we can extract the extension from the whole string
+
+            var ext = input.files[i].name.substring(input.files[i].name.lastIndexOf('.') + 1).toLowerCase()
+
+            if ((ext == 'jpg') || (ext == 'png') || (ext == 'svg') || (ext == 'jpeg')) {
+                $("#msg").text("Files are supported");
+            }
+            else {
+                $("#msg").text("Files are not supported")
+                // we need to empty the file uploader
+                document.getElementById("file-picker").value = "";
+            }
+
+        }
+
+    });
+</script>
+
+</html>

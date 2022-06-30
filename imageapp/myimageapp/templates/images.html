@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Images
+{% endblock %}
+{% block link %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+{% endblock %}
+
+{% block content %}
+
+<!-- -------------Featured Brands--------- -->
+<div class="small-container">
+    <div class="title">
+        <p>{{current_user.user_name}}</p>
+    </div>
+
+
+    <div class="row">
+        {% for image_obj in image_objs %}
+        <div class="col-4">            
+            <img src="{{url_for('send_image', filename=image_obj.image_name, foldername=folder_name)}}" alt="">
+            <figcaption style="width:10px">
+                <a href="{{url_for('delete_image', id_given=image_obj.id)}}">Delete</a>
+            </figcaption>            
+        </div>
+        {% endfor %}
+
+    </div>
+    <br>
+    <a href="{{url_for('home_page')}}">Back</a>
+</div>
+
+
+{% endblock %}
