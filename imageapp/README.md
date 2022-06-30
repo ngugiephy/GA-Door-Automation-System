@@ -21,12 +21,12 @@ This mini tutorial will use commands on the git bash terminal
 
 Clone it as follows on your desired working directory
 ```bash
-$ git clone https://github.com/Donatussss/imageapp.git
+$ git clone https://github.com/ngugiephy/GA-Door-Automation-System.git
 ```
 
 Change directory into the imageapp directory
 ```bash
-$ cd imageapp
+$ cd GA-Door-Automation-System/imageapp
 ```
 Install requirements as follows. We will need to create a virtual environment where our packages will go and activate it in order to use it.
 In this app I happen to use another package I created called [flask-dt](https://github.com/GreatDt1/flaskdt)
@@ -57,3 +57,5 @@ Take note of the IPv4 address of the Wireless LAN adapter
 One can thus access the running app from another device on the same network using the following format
 http://ip:5000/
 e.g. http://172.20.10.1:5000/
+
+[Author](https://github.com/Donatussss)
