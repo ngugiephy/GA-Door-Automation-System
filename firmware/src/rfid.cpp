@@ -14,7 +14,7 @@ void setupRFID()
   pinMode(blue, OUTPUT);
   pinMode(green, OUTPUT);
   pinMode(buzzer, OUTPUT);
-  pinMode(lock, OUTPUT);
+  pinMode(locker, OUTPUT);
   SPI.begin(); 
   lcd.init();
   lcd.backlight();
@@ -68,14 +68,14 @@ void scanCard()
     lcd.clear();
     lcd.setCursor(0,0);
     lcd.println("Authorised access");    
-    digitalWrite(lock, LOW);
+    digitalWrite(locker, LOW);
     Serial.println();
     delay(1000);
     digitalWrite(green, LOW);
     digitalWrite(blue, HIGH);
     digitalWrite(buzzer, LOW);
     delay(5000);
-    digitalWrite(lock, HIGH);
+    digitalWrite(locker, HIGH);
     delay(2500);
    
         
@@ -88,7 +88,7 @@ void scanCard()
     lcd.clear();
     lcd.setCursor(0,0);
     lcd.println("Access denied");
-    digitalWrite(lock, HIGH);
+    digitalWrite(locker, HIGH);
     delay(1000);
     digitalWrite(red, LOW);
     digitalWrite(blue, HIGH);

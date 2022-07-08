@@ -14,15 +14,16 @@ void blinkTest(){
 }
 
 void setup() {
-  Serial.begin(9600);
+  Serial.begin(115200);
   pinMode(blinkPin,OUTPUT);
-  setupRFID();
-  keypadSetup();
+  serverSetup();
+  // setupRFID();
+  // keypadSetup();
 }
 
 void loop() {
-  blinkTest();
-  // postMan();
+  //blinkTest();
+  runServer();
   // scanCard();
   // keyScanner();
 }

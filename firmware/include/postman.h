@@ -1,1 +1,2 @@
-int postMan();
+void serverSetup();
+void runServer();

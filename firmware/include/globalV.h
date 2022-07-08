@@ -7,10 +7,10 @@
 #define blue 3
 #define green 4
 
-#define lock 6
+#define locker 16
 #define buzzer 2
 
-#define blinkPin 2
+#define blinkPin 5
 #define R1 12
 #define R2 11
 #define R3 10
