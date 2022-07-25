@@ -1,0 +1,5 @@
+(sym_lib_table
+  (lib (name "ESP32-DEVKIT-V1")(type "Legacy")(uri "${KIPRJMOD}/Libraries/ESP32-DEVKIT-V1/ESP32-DEVKIT-V1.lib")(options "")(descr ""))
+  (lib (name "esp32_devkit_v1_doit")(type "Legacy")(uri "/home/kiprop/Downloads/kicad-master/symbols/esp32_devkit_v1_doit.lib")(options "")(descr ""))
+  (lib (name "buck_converter")(type "KiCad")(uri "${KIPRJMOD}/Symbols/buck_converter.kicad_sym")(options "")(descr ""))
+)

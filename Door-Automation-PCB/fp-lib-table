@@ -1,0 +1,5 @@
+(fp_lib_table
+  (lib (name "esp32_devkit_v1_doit")(type "KiCad")(uri "/home/kiprop/Downloads/kicad-master/footprints/esp32_devkit_v1_doit.pretty")(options "")(descr ""))
+  (lib (name "ESP32-DEVKIT-V1")(type "KiCad")(uri "${KIPRJMOD}/Libraries/ESP32-DEVKIT-V1")(options "")(descr ""))
+  (lib (name "converters")(type "KiCad")(uri "${KIPRJMOD}/Footprints/converters.pretty")(options "")(descr ""))
+)
