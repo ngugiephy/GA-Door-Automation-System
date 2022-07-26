@@ -1,6 +1,6 @@
 import cv2 as cv
 
-cap = cv.VideoCapture(2)
+cap = cv.VideoCapture(0)
 
 # Check if the webcam is opened correctly
 if not cap.isOpened():
@@ -24,7 +24,6 @@ while True:
     c = cv.waitKey(1)
     if c == 27:
      break
-
 
 cap.release()
 cv.destroyAllWindows()
