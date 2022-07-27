@@ -910,9 +910,9 @@
     (fp_circle (center 5.08 0) (end 6.58 0) (layer "F.Fab") (width 0.1) (fill none) (tstamp 5d7ba253-54f7-44da-8c6e-d76a9133c5c0))
     (fp_circle (center 0 0) (end 1.5 0) (layer "F.Fab") (width 0.1) (fill none) (tstamp b4828566-0bf1-4643-b1b6-cb4807462830))
     (pad "1" thru_hole rect (at 0 0 180) (size 2.6 2.6) (drill 1.3) (layers *.Cu *.Mask)
-      (net 31 "/+3.3V") (pinfunction "Pin_1") (pintype "passive") (tstamp 1043b6f4-ab0e-4f5c-b588-b80d4416ef23))
+      (net 30 "/GND") (pinfunction "Pin_1") (pintype "passive") (tstamp 1043b6f4-ab0e-4f5c-b588-b80d4416ef23))
     (pad "2" thru_hole circle (at 5.08 0 180) (size 2.6 2.6) (drill 1.3) (layers *.Cu *.Mask)
-      (net 30 "/GND") (pinfunction "Pin_2") (pintype "passive") (tstamp 8b558536-1bde-44d3-be26-2bd38243611d))
+      (net 31 "/+3.3V") (pinfunction "Pin_2") (pintype "passive") (tstamp 8b558536-1bde-44d3-be26-2bd38243611d))
     (model "${KICAD6_3DMODEL_DIR}/TerminalBlock_Phoenix.3dshapes/TerminalBlock_Phoenix_MKDS-1,5-2-5.08_1x02_P5.08mm_Horizontal.wrl"
       (offset (xyz 0 0 0))
       (scale (xyz 1 1 1))
