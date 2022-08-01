@@ -18,6 +18,6 @@ The final PCB looks like this without components
 
 ![PCB](./pictures/PCB-no-components.png)
 
-It lloks like this with components
+It looks like this with components
 
 ![pcb](./pictures/PCB-components.png)
