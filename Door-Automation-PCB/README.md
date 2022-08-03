@@ -16,8 +16,8 @@ The pdf version of the schematic is available in the schematic subfolder.
 
 The final PCB looks like this without components
 
-![PCB](./pictures/PCB-no-components.png)
+![PCB](./pictures/Door-Automation-PCB-no-components.png)
 
 It looks like this with components
 
-![pcb](./pictures/PCB-components.png)
+![pcb](./pictures/Door-Automation-PCB-components.png)
